@@ -1,0 +1,845 @@
+<html  xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>WITSML</title>
+<style type="text/css">
+<!--
+ /* Style Definitions */
+h1
+	{
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+h2
+	{
+	margin-top:18.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-weight:bold;
+	font-style:italic;}
+h3
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h4
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h5
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Arial";
+	font-weight:normal;}
+p
+	{margin-right:0in;
+	margin-top:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+-->
+</style>
+</head>
+
+<body>
+
+<h1 align="center" >WITSML Data Schema Overview</h1>
+
+<h1 align="center">Version 2.0</h1><p><p>
+
+WITSML is data exchange standard for specifying and exchanging data for wells and well-related operations and objects, such as drilling, logging and mud logging. The main focus of WITSML is for the right-time, seamless flow of well data between operators and service companies to speed and enhance decision making.
+
+<h2><a name="_WITSML_Schemas,_XML"></a>WITSML Packages:</h2>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Attachment_schema">Attachment data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>The attachment object is used to provide a central location for finding a digital attachment that is associated with another WITSML wellbore related object. The attachment is captured in a base 64 binary type</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Attachment.xsd</td>
+            <td><a href="./schema/Attachment.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_BhaRun_schema">BhaRun data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>The bhaRun object is used to capture information about one run of the drill string in to and out of the hole. The drill string configuration is described in the tubular object. That is, one configuration may be used for many runs.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;BhaRun.xsd</td>
+            <td><a href="./schema/BhaRun.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_CementJob_schema">CementJob data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>The cementJob object is used to capture information about cementing operations which are undertaken to seal the annulus after a casing string has been run, to seal a lost circulation zone or to set a plug to support directional drilling operations or seal a well so that it may be abandoned. This object is uniquely identified within the context of one wellbore object.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;CementJob.xsd</td>
+            <td><a href="./schema/CementJob.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_CementJobEvaluation_schema">CementJobEvaluation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>CementJobEvaluation is a top-level object that is used to record the testing and evaluation of a previously performed cement job.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;CementJob.xsd</td>
+            <td><a href="./schema/CementJob.html#CementJobEvaluation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Channel_schema">Channel data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>A channel object. Corresponds roughly to the LogCurveInfo structure in WITSML1411, and directly corresponds to the ChannelMetadataRecord structure in ETP. In historian terminology, a Channel corresponds directly to a tag. Channels are the fundamental unit of organization for WITSML logs.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Log.xsd</td>
+            <td><a href="./schema/Log.html#Channel">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_ChannelSet_schema">ChannelSet data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>A grouping of Channels with a compatible index for some purpose. As discussed earlier, each Channel effectively has its own index. By compatible index, we simply mean that all of the Channels are either in time or in depth using a common datum.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Log.xsd</td>
+            <td><a href="./schema/Log.html#ChannelSet">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_CuttingsGeology_schema">CuttingsGeology data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>Container for Cuttings Lithology items. The mud logger at the wellsite takes regular samples of drilled cuttings while the well is being drilled and examines the cuttings to determine the rock types (lithologies) present in each sample. The cuttings samples will typically contain a mix of different lithologies in each sample because there may have been multiple rock types that were drilled within the sample depth interval and there can also be mixing of cuttings as they travel up the wellbore and are collected on the shakers. CuttingsGeology therefore will typically contain multiple lithology elements for each interval so that the percentages of each lithology in the sample along with the more detailed geological description can be recorded.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;WellboreGeology.xsd</td>
+            <td><a href="./schema/WellboreGeology.html#CuttingsGeology">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_DepthRegImage_schema">DepthRegImage data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>Information about the composition, layout, and depth registration of a digital image of a well log, typically a scanned image of a paper well log document.  A depth registration is performed that provides digital depth references on the raster log image. The results of the calibration are stored in another file, separate from the image, which is commonly known as the depth registration file. The primary role of the depth registration file is to match pixels from the well log image with depth pixels represented in the wellbore.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;DepthRegImage.xsd</td>
+            <td><a href="./schema/DepthRegImage.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_DownholeComponent_schema">DownholeComponent data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>Contains all the wellbore equipment in a well. Components are identified as to which wellbore they are in. This data-object covers the openhole boreholes, the strings of equipment, the components in each string and the details of these components, and the connections from these elements to the reservoir.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;DownholeComponent.xsd</td>
+            <td><a href="./schema/DownholeComponent.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_DrillReport_schema">DrillReport data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>The drillReport object is used to capture a daily drilling report focused on reporting from the operator to partners or to a governmental agency. See the opsReport object for a similar report whose focus is service company to operator.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;DrillReport.xsd</td>
+            <td><a href="./schema/DrillReport.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_FluidsReport_schema">FluidsReport data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>The fluidsReport object is used to capture an analysis of the drilling mud. This object is uniquely identified within the context of one wellbore object.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;FluidsReport.xsd</td>
+            <td><a href="./schema/FluidsReport.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_InterpretedGeology_schema">InterpretedGeology data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>Container for Interpreted Lithology items. These are manually entered per sample by the wellsite geologist or mud logger as an interpretation of the actual lithology sequence along the length of the wellbore by correlating the percentage lithologies observed in the cuttings samples along with other data (typically the drill rate and gamma ray curves), to estimate the location of the boundaries between the different lithology types. This analysis creates a sequence of individual lithologies along the wellbore. InterpretedGeology therefore will typically contain a single lithology element for each interval that captures the detailed geological description of the lithology.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;WellboreGeology.xsd</td>
+            <td><a href="./schema/WellboreGeology.html#InterpretedGeology">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Log_schema">Log data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>Primarily a container for one or more ChannelSets. Most of the information is now at the ChannelSet level. The concept of multiple ChannelSet in a single Log is significant change from WITSML v1.4.1.1 where each Log represented exactly one group of curves and their data.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Log.xsd</td>
+            <td><a href="./schema/Log.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_MudLogReport_schema">MudLogReport data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>Details of wellbore geology intervals, drilling parameters, chromatograph, mud gas, etc., data within an mdInterval.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;MudLogReport.xsd</td>
+            <td><a href="./schema/MudLogReport.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_OpsReport_schema">OpsReport data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>Captures a daily drilling report focused on reporting from the service company to the operator. See the drillReport for a similar data-object whose focus is operator to partner or to governmental agency.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;OpsReport.xsd</td>
+            <td><a href="./schema/OpsReport.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Rig_schema">Rig data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>The rig object is used to capture information about a drilling rig used to drill a wellbore. This object is uniquely identified within the context of one wellbore object.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Rig.xsd</td>
+            <td><a href="./schema/Rig.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_RigUtilization_schema">RigUtilization data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>Rig Utilization Schema. Used to capture information related to the usage of a specific rig. For information unique to the rig itself, see the Rig object.</h5></th>
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Rig.xsd</td>
+            <td><a href="./schema/Rig.html#RigUtilization">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Risk_schema">Risk data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>The risk object is used to provide a central location for capturing risk information about other well related objects.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Risk.xsd</td>
+            <td><a href="./schema/Risk.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_ShowEvaluation_schema">ShowEvaluation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>Container for Show Evaluation items. In a similar way to the InterpretedGeology, these are manually entered by the wellsite geologist or mud logger as an interpretation of the hydrocarbon show along the wellbore, based on the raw readings from one or more show analyses of individual show tests on cuttings samples.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;WellboreGeology.xsd</td>
+            <td><a href="./schema/WellboreGeology.html#ShowEvaluation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_StimJob_schema">StimJob data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>Captures a post job summary report about a stimulation (fracture) job. See the WITSML stimJob data-object Usage Guide for an overview of its intended usage.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;StimJob.xsd</td>
+            <td><a href="./schema/StimJob.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_StimJobStage_schema">StimJobStage data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>Stage treated during a stimulation job.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;StimJob.xsd</td>
+            <td><a href="./schema/StimJob.html#StimJobStage.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_StimPerforationCluster_schema">StimPerforationCluster data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>Information about a set of perforations. The assumption is that all perforations within a given set are created with the same device or method.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;StimJob.xsd</td>
+            <td><a href="./schema/StimJob.html#StimPerforationCluster">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_SurveyProgram_schema">SurveyProgram data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>Captures information about the nature, range, and sequence of directional surveying tools run in a wellbore for the management of positional uncertainty. This object is uniquely identified within the context of one wellbore object.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;SurveyProgram.xsd</td>
+            <td><a href="./schema/SurveyProgram.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_ToolErrorModel_schema">ToolErrorModel data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>The toolErrorModel object is used to define a surveying tool error model. This object is globally unique.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;ToolErrorModel.xsd</td>
+            <td><a href="./schema/ToolErrorModel.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_ToolErrorTermSet_schema">ToolErrorTermSet data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>The toolErrorTermSet object is used to define a set of surveying tool error terms which may be utilized in a toolErrorModel. This object is globally unique.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;ToolErrorTermSet.xsd</td>
+            <td><a href="./schema/ToolErrorTermSet.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Trajectory_schema">Trajectory data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>The trajectory object is used to capture information about a directional survey in a wellbore. It contains many trajectory stations to capture the information about individual survey points. </h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Trajectory.xsd</td>
+            <td><a href="./schema/Trajectory.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Tubular_schema">Tubular data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>The tubular object is used to capture information about the configuration of a drill string. See the bhaRun object for information about a use of this configuration. </h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Tubular.xsd</td>
+            <td><a href="./schema/Tubular.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Well_schema">Well data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>A well is a boring in the Earth that has two main purposes:
+1) Exploration of the subsurface to determine viability of economic development and production of hydrocarbons.
+2) Production of hydrocarbons to the surface and conducting of a variety of operations and services for the safe and efficient operation of the wells. The well provides the key context for activities that occur in a well and its wellbores, and the resulting data generated, such as drilling and logging.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Well.xsd</td>
+            <td><a href="./schema/Well.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_WellCMLedger_schema">WellCMLedger data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>This name is short for Well Construction and Maintenance Ledger.  Contains details of events (which were defined in Section 2.1.4.1, page 13). Each event also has a pointer to elements of downhole components that the event changes.  It can reference UID well and UID wellbore for each event, making this data-object able to represent events on multiple wells.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;WellCMLedger.xsd</td>
+            <td><a href="./schema/WellCMLedger.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_WellCompletion_schema">WellCompletion data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>The Well Completion data-object represents a “flow” or “stream” from the well (e.g., from a wellhead port) that is associated with a set of Wellbore Completions. When there is more than one such Wellbore Completion, the flows from them commingle in the well (the Wellbore Completions may be located in multiple wellbores). The Well Completion represents this commingled flow. It can be associated with business concept such as field, rights, etc.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;WellCompletion.xsd</td>
+            <td><a href="./schema/WellCompletion.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Wellbore_schema">Wellbore data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>The wellbore object is used to capture the general information about a wellbore. This might sometimes be called a wellbore header. A wellbore represents the path from surface to a unique bottom-hole location. </h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Wellbore.xsd</td>
+            <td><a href="./schema/Wellbore.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_WellboreCompletion_schema">WellboreCompletion data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>Each Wellbore Completion represents a flowing connection between wellbore and reservoir. It contains Contact Intervals, which reference the physical aspects of these connections detailed in downholeComponents.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;WellboreCompletion.xsd</td>
+            <td><a href="./schema/WellboreCompletion.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_WellboreGeology_schema">WellboreGeology data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>This is the former MudLog object.  This includes lithologic information derived from cuttings encountered on a shaker screen at a site.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;WellboreGeology.xsd</td>
+            <td><a href="./schema/WellboreGeology.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_WellboreGeometry_schema">WellboreGeometry data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>Captures information about the configuration of the permanently installed components in a wellbore. It does not define the transient drilling strings (see the tubular data-object) or the hanging production components.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;WellboreGeometry.xsd</td>
+            <td><a href="./schema/WellboreGeometry.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_WellboreMarker_schema">WellboreMarker data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>Captures information about a geologic formation that was encountered in a wellbore.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;WellboreMarkers.xsd</td>
+            <td><a href="./schema/WellboreMarkers.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_WellboreMarkerSet_schema">WellboreMarkerSet data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>The WellboreMarkerSet is a collection of WellboreMarkers.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;WellboreMarkers.xsd</td>
+            <td><a href="./schema/WellboreMarkers.html#WellboreMarkerSet">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_WitsmlAllObjects_schema">WitsmlAllObjects data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>This Package includes all individual Witsml data objects in 1 file, ideal for importing all of them using a common schema location.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;WitsmlAllObjects.xsd</td>
+            <td><a href="./schema/WitsmlAllObjects.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_WitsmlCommon_schema">WitsmlCommon data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5><p>Shared data-objects and related objects. These data-objects are shared across all packages in the WITSML schema.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;WitsmlCommon.xsd</td>
+            <td><a href="./schema/WitsmlCommon.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+<p><small>Copyright(c) 2003-2016 Energistics. All rights reserved.</BR>
+
+WITSMLï¿½ and the WITSML logoï¿½ are trademarks of Energistics.</small></p>
+
+
+</div>
+
+</body>
+
+</html>

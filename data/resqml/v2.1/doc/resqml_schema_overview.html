@@ -1,0 +1,1677 @@
+<html xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:witsml="http://www.witsml.org/schemas/131b" xmlns:cont="http://www.posc.org/schemas/schemaContent">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>RESQML</title>
+<style type="text/css">
+<!--
+ /* Style Definitions */
+h1
+	{
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+h2
+	{
+	margin-top:18.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-weight:bold;
+	font-style:italic;}
+h3
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h4
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h5
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Arial";
+	font-weight:normal;}
+p
+	{margin-right:0in;
+	margin-top:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+-->
+</style>
+   </head>
+   <body>
+
+<h1 align="center" >RESQML Data Schema Overview</h1>
+
+<h1 align="center">Version 2.1</h1><p><p>
+
+RESQML is an XML- and HDF5-based data-exchange standard that facilitates reliable, automated
+exchange of data among software packages used in subsurface workflows. RESQML consists of a set of
+XML schemas (XSD files) and other standards-based technology, which developers implement into
+software packages. Software that has implemented RESQML can read and write the standard format.
+
+<h2><a name="_RESQML_Schemas,_XML"></a>RESQML Packages:</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <h4><a name="_Features_schema">Features data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Features refer to something that has physical existence at some point during the exploration, development, production, or abandonment of a reservoir. For example: It can be a boundary, a rock volume, a basin area, but also extends to a drilled well, a drilling rig, an injected or produced fluid, or a 2D, 3D, or 4D seismic survey. In RESQML, features are divided into these categories: geologic or technical.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Features.xsd</td>
+            <td><a href="./schema/Features.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Geometry_schema">Geometry data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>This package describes the geometry classes of a RESQML model. In general, geometry is attached to a representation with either a finite extent or planes, which are infinite. However, when spatial locations need to be stored for specific elements in a representation, then this information is stored similarly to properties using property points.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Geometry.xsd</td>
+            <td><a href="./schema/Geometry.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Grids_schema">Grids data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A grid is a RESQML representation that provides a cellular discretization of space. </h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Grids.xsd</td>
+            <td><a href="./schema/Grids.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+      <h4><a name="_Interpretations_schema">Interpretations data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>RESQML uses the definition of David Gawith, which explains an interpretation as a single consistent description of a feature. An interpretation is subjective and very strongly tied to the intellectual activity of the project team members. The initial curiosity and reasoning of the people on the project team initiates the early pre-screening campaign (remote sensing, surveys). They make hypotheses that consist of as many interpretations as necessary to describe the features (Gawith and Gutteridge 2007).</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Interpretations.xsd</td>
+            <td><a href="./schema/Interpretations.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Properties_schema">Properties data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Individual property values are attached to a single type of element in the representation, either its topological elements, such as nodes or cells, or larger elements such as the entire representation or large parts of it, through patches and sub-representations. Each property value is also associated with a single property type, which provides global semantics about the meaning of these values.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Properties.xsd</td>
+            <td><a href="./schema/Properties.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Representations_schema">Representations data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A representation refers to a digital description of a feature or interpretation. For example, currently in RESQML, a horizon interpretation may be represented by a point set, a set of triangulated surfaces, or a set of orthogonal grids. </h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Representations.xsd</td>
+            <td><a href="./schema/Representations.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_ResqmlCommon_schema">ResqmlCommon data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Shared data-objects and related objects. These data-objects are shared across all packages in the RESQML schema.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;ResqmlCommon.xsd</td>
+            <td><a href="./schema/ResqmlCommon.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Seismic_schema">Seismic data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A RESQML seismic survey representation makes use of previously defined representations, with the addition of seismic coordinates to their geometry. A seismic survey is an organization of seismic lines.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Seismic.xsd</td>
+            <td><a href="./schema/Seismic.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Streamlines_schema">Streamlines data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Streamlines are used in a reservoir engineering context to visualize the directions of fluid flow within a reservoir. Streamlines are static geometric trajectories in space that are based upon fluid velocities at a specified time.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Streamlines.xsd</td>
+            <td><a href="./schema/Streamlines.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Structural_schema">Structural data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Representations are the digital descriptions of a feature interpretation or a technical feature. This representation is based on a topology and contains the geometry of the digital description or is based on the topology or the geometry of another representation. Structural has two types of representations: - Representation of Individual Representations and Representation of Organization Representations.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Structural.xsd</td>
+            <td><a href="./schema/Structural.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+      <h4><a name="_Wells_schema">Wells data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>The RESQML description of a well uses a wellbore trajectory representation to describe the geometry of a wellbore, and a wellbore frame to provide the topological support for properties. Wellbore marker frames and blocked wellbores are derived from the wellbore frame.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Wells.xsd</td>
+            <td><a href="./schema/Wells.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+
+
+<h2><a name="_RESQML_Schemas,_XML"></a>RESQML Top-Level Objects:</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <BR>
+
+      <h4><a name="_BlockedWellboreRepresentation_schema">BlockedWellboreRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>The information that allows you to locate, on one or several grids (existing or planned), the intersection of volume (cells) and surface (faces) elements with a wellbore trajectory (existing or planned).</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Wells.xsd</td>
+            <td><a href="./schema/Wells.html#BlockedWellboreRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+     <h4><a name="_BooleanProperty_schema">BooleanProperty data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Information specific to one boolean property. Used to capture a choice between 2 and only 2 possible values/states for each indexable element of a data-object, for example, identifying active cells of a grid.</h5></th>
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Properties.xsd</td>
+            <td><a href="./schema/Properties.html#BooleanProperty">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_BoundaryFeature_schema">BoundaryFeature data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>An interface between two objects, such as horizons and faults. It is a surface object.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Features.xsd</td>
+            <td><a href="./schema/Features.html#BoundaryFeature">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_BoundaryFeatureInterpretation_schema">BoundaryFeatureInterpretation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>The main class for data describing an opinion of a surface feature between two volumes. BUSINESS RULE: The data-object reference (of type "interprets") must reference only a boundary feature.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Interpretations.xsd</td>
+            <td><a href="./schema/Interpretations.html#BoundaryFeatureInterpretation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_CategoricalProperty_schema">CategoricalProperty data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Information specific to one categorical property. Contains discrete integer. This type of property is associated either as: - an internally stored index to a string through a lookup mapping. - an internally stored double to another double value through an explicitly provided table.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Properties.xsd</td>
+            <td><a href="./schema/Properties.html#CategoricalProperty">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_CmpLineFeature_schema">CmpLineFeature data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Location of a single line of cmp points resulting from a 2D seismic acquisition</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Seismic.xsd</td>
+            <td><a href="./schema/Seismic.html#CmpLineFeature">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_CommentProperty_schema">CommentProperty data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Information specific to one comment property. Used to capture comments or annotations associated with a given element type in a data-object, for example, associating comments on the specific location of a well path</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Properties.xsd</td>
+            <td><a href="./schema/Properties.html#CommentProperty">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_ContinuousProperty_schema">ContinuousProperty data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Most common type of property used for storing rock or fluid attributes; all are represented as doubles. So that the value range can be known before accessing all values, the min and max values of the range are also stored. BUSINESS RULE: It also contains a unit of measure, which can be different from the unit of measure of its property type, but it must be convertible into this unit.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Properties.xsd</td>
+            <td><a href="./schema/Properties.html#ContinuousProperty">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_DeviationSurveyRepresentation_schema">DeviationSurveyRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Specifies the station data from a deviation survey. The deviation survey does not provide a complete specification of the geometry of a wellbore trajectory. Although a minimum-curvature algorithm is used in most cases, the implementation varies sufficiently that no single algorithmic specification is available as a data transfer standard. Instead, the geometry of a RESQML wellbore trajectory is represented by a parametric line, parameterized by the MD. CRS and units of measure do not need to be consistent with the CRS and units of measure for wellbore trajectory representation.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Wells.xsd</td>
+            <td><a href="./schema/Wells.html#DeviationSurveyRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_DiscreteProperty_schema">DiscreteProperty data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Contains discrete integer values; typically used to store any type of index. So that the value range can be known before accessing all values, it also stores the minimum and maximum value in the range.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Properties.xsd</td>
+            <td><a href="./schema/Properties.html#DiscreteProperty">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_DoubleTableLookup_schema">DoubleTableLookup data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Defines a function for table lookups. For example, used for linear interpolation, such as PVT. Used for categorical property, which also may use StringTableLookup.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Properties.xsd</td>
+            <td><a href="./schema/Properties.html#DoubleTableLookup">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_EarthModelInterpretation_schema">EarthModelInterpretation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>An earth model interpretation has a specific role: it gathers a maximum of one of each of these other organization interpretations: structural organization interpretation, stratigraphic organization interpretation, and/or fluid organization interpretation. BUSINESS RULE: An earth model Interpretation interprets only an earth model feature.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Interpretations.xsd</td>
+            <td><a href="./schema/Interpretations.html#EarthModelInterpretation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_FaultInterpretation_schema">FaultInterpretation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A type of boundary feature, this class contains the data describing an opinion about the characterization of the fault, which includes the attributes listed below. </h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Interpretations.xsd</td>
+            <td><a href="./schema/Interpretations.html#FaultInterpretation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_FluidBoundaryInterpretation_schema">FluidBoundaryInterpretation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A boundary (usually a plane) separating two fluid phases, such as a gas-oil contact (GOC), a water-oil contact (WOC), a gas-oil contact (GOC), or others. For types, see FluidContact.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Interpretations.xsd</td>
+            <td><a href="./schema/Interpretations.html#FluidBoundaryInterpretation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_FrontierFeature_schema">FrontierFeature data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Identifies a frontier or boundary in the earth model that is not a geological feature but an arbitrary geographic/geometric surface used to delineate the boundary of the model.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Features.xsd</td>
+            <td><a href="./schema/Features.html#FrontierFeature">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_GenericFeatureInterpretation_schema">GenericFeatureInterpretation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>An interpretation of a feature that is not specialized. For example, use it when the specialized type of the associated feature is not known.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Interpretations.xsd</td>
+            <td><a href="./schema/Interpretations.html#GenericFeatureInterpretation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_GeobodyBoundaryInterpretation_schema">GeobodyBoundaryInterpretation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A type of boundary feature, this class identifies if the boundary is a geobody and the type of the boundary</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Interpretations.xsd</td>
+            <td><a href="./schema/Interpretations.html#GeobodyBoundaryInterpretation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_GeobodyInterpretation_schema">GeobodyInterpretation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A type of rock feature, this class identifies if a rock feature is a geobody with any qualifications on the interpretation of the geobody.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Interpretations.xsd</td>
+            <td><a href="./schema/Interpretations.html#GeobodyInterpretation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_GeologicUnitInterpretation_schema">GeologicUnitInterpretation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>The main class for data describing an opinion of a volume-based geologic feature or unit.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Interpretations.xsd</td>
+            <td><a href="./schema/Interpretations.html#GeologicUnitInterpretation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_GpGridRepresentation_schema">GpGridRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>General purpose (GP) grid representation, which includes and/or extends the features from all other grid representations. This general purpose representation is included in the schema for research and/or advanced modeling purposes, but is not expected to be used for routine data transfer.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Grids.xsd</td>
+            <td><a href="./schema/Grids.html#GpGridRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Grid2dRepresentation_schema">Grid2dRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Representation based on a 2D grid. For definitions of slowest and fastest axes of the array, see Grid2dPatch</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Structural.xsd</td>
+            <td><a href="./schema/Structural.html#Grid2dRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Grid2dSetRepresentation_schema">Grid2dSetRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Set of representations based on a 2D grid. Each 2D grid representation corresponds to one patch of the set.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Structural.xsd</td>
+            <td><a href="./schema/Structural.html#Grid2dSetRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_GridConnectionSetRepresentation_schema">GridConnectionSetRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Representation that consists of a list of connections between grid cells, potentially on different grids. </h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Grids.xsd</td>
+            <td><a href="./schema/Grids.html#GridConnectionSetRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_HorizonInterpretation_schema">HorizonInterpretation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>An interpretation of a horizon, which optionally provides stratigraphic information.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Interpretations.xsd</td>
+            <td><a href="./schema/Interpretations.html#HorizonInterpretation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_IjkGridRepresentation_schema">IjkGridRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Grid whose topology is characterized by structured column indices (I,J) and a layer index, K. Cell geometry is characterized by nodes on coordinate lines, where each column of the model has 4 sides. Geometric degeneracy is permitted. IJK grids support the following specific extensions: - IJK radial grids - K-Layer gaps - IJ-Column gaps</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Grids.xsd</td>
+            <td><a href="./schema/Grids.html#IjkGridRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_LocalGridSet_schema">LocalGridSet data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Used to activate and/or deactivate the specified children grids as local grids on their parents. Once activated, this object indicates that a child grid replaces local portions of the corresponding parent grid.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Grids.xsd</td>
+            <td><a href="./schema/Grids.html#LocalGridSet">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_MdDatum_schema">MdDatum data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Specifies the location of the measured depth = 0 reference point. The location of this reference point is defined with respect to a CRS, which need not be the same as the CRS of a wellbore trajectory representation, which may reference this location.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Wells.xsd</td>
+            <td><a href="./schema/Wells.html#MdDatum">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Model_schema">Model data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>The explicit description of the relationships between geologic features, such as rock features (e.g., stratigraphic units, geobodies, phase unit) and boundary features (e.g., genetic, tectonic, and fluid boundaries).</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Features.xsd</td>
+            <td><a href="./schema/Features.html#Model">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_NonSealedSurfaceFrameworkRepresentation_schema">NonSealedSurfaceFrameworkRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A collection of contact representations parts, which are a list of contact patches with no identity. This collection of contact representations is completed by a set of representations gathered at the representation set representation level.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Structural.xsd</td>
+            <td><a href="./schema/Structural.html#NonSealedSurfaceFrameworkRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_PlaneSetRepresentation_schema">PlaneSetRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Defines a plane representation, which can be made up of multiple patches. Commonly represented features are fluid contacts or frontiers. Common geometries of this representation are titled or horizontal planes. </h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Structural.xsd</td>
+            <td><a href="./schema/Structural.html#PlaneSetRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_PointSetRepresentation_schema">PointSetRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A representation that consists of one or more node patches. Each node patch is an array of XYZ coordinates for the 3D points. There is no implied linkage between the multiple patches.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Structural.xsd</td>
+            <td><a href="./schema/Structural.html#PointSetRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_PointsProperty_schema">PointsProperty data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Represents the geometric information that should *not* be used as representation geometry, but should be used in another context where the location or geometrical vectorial distances are needed.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Properties.xsd</td>
+            <td><a href="./schema/Properties.html#PointsProperty">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_PolylineRepresentation_schema">PolylineRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A representation made up of a single polyline or "polygonal chain", which may be closed or not. Definition from Wikipedia (http://en.wikipedia.org/wiki/Piecewise_linear_curve): A polygonal chain, polygonal curve, polygonal path, or piecewise linear curve, is a connected series of line segments. More formally, a polygonal chain P is a curve specified by a sequence of points \scriptstyle(A_1, A_2, \dots, A_n) called its vertices so that the curve consists of the line segments connecting the consecutive vertices.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Structural.xsd</td>
+            <td><a href="./schema/Structural.html#PolylineRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_PolylineSetRepresentation_schema">PolylineSetRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A representation made up of a set of polylines or a set of polygonal chains (for more information, see PolylineRepresentation). For compactness, it is organized by line patch as a unique polyline set patch. if allPolylineClosed = True, all the polylines are connected between the first and the last point. Its geometry is a 1D array of points, corresponding to the concatenation of the points of all polyline points.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Representations.xsd</td>
+            <td><a href="./schema/Representations.html#PolylineSetRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_PropertySet_schema">PropertySet data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A description of a property name relative to a standard definition. For example, you may specify if the property kind is abstract, the dictionary in which the property is unique, and the representative unit of measure.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Properties.xsd</td>
+            <td><a href="./schema/Properties.html#PropertySet">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_RedefinedGeometryRepresentation_schema">RedefinedGeometryRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A representation derived from an existing representation by redefining its geometry. Example use cases include deformation of the geometry of an object, change of coordinate system, and change of time <=> depth.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Representations.xsd</td>
+            <td><a href="./schema/Representations.html#RedefinedGeometryRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_RepresentationIdentitySet_schema">RepresentationIdentitySet data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A collection of representation identities. A representation identity indicates the nature of the relationship between 2 or more representations, specifically if they are partially or totally identical. For possible types of relationships, see IdentityKind.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Representations.xsd</td>
+            <td><a href="./schema/Representations.html#RepresentationIdentitySet">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_RepresentationSetRepresentation_schema">RepresentationSetRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>The parent class of the framework representations. It is used to group together individual representations to represent a bag of representations. If the individual representations are all of the same, then you can indicate that the set is homogenous. These bags do not imply any geologic consistency. </h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Representations.xsd</td>
+            <td><a href="./schema/Representations.html#RepresentationSetRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_ResqmlAllObjects_schema">ResqmlAllObjects data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>This Package includes all individual Resqml data objects in 1 file, ideal for importing all of them using a common schema location.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;ResqmlCommon.xsd</td>
+            <td><a href="./schema/ResqmlAllObjects.html">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_RockFluidOrganizationInterpretation_schema">RockFluidOrganizationInterpretation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Interpretation of the fluid organization units</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Interpretations.xsd</td>
+            <td><a href="./schema/Interpretations.html#RockFluidOrganizationInterpretation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_RockFluidUnitInterpretation_schema">RockFluidUnitInterpretation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A type of rock fluid feature-interpretation , this class identifies a rock fluid feature by its phase.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Interpretations.xsd</td>
+            <td><a href="./schema/Interpretations.html#RockFluidUnitInterpretation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_RockVolumeFeature_schema">RockVolumeFeature data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A volume of rock located between one or more boundary features.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Features.xsd</td>
+            <td><a href="./schema/Features.html#RockVolumeFeature">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_SealedSurfaceFrameworkRepresentation_schema">SealedSurfaceFrameworkRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A collection of contact representations parts, which are a list of contact patches and their identities. This collection of contact representations is completed by a set of representations gathered at the representation set representation level.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Structural.xsd</td>
+            <td><a href="./schema/Structural.html#SealedSurfaceFrameworkRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_SealedVolumeFrameworkRepresentation_schema">SealedVolumeFrameworkRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A strict boundary representation (BREP), which represents the volume region by assembling together shells. </h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Structural.xsd</td>
+            <td><a href="./schema/Structural.html#SealedVolumeFrameworkRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Seismic2dPostStackRepresentation_schema">Seismic2dPostStackRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>The feature of this representation should be the same survey feature as the associated PolylineRepresentation represents.. The indexing convention (mainly for associated properties) is : - Trace sample goes fastest - then polyline node slowest The indexing convention only applies to HDF datasets (not SEGY file) Whole referenced SEGY file can be referenced in properties of this representation, not part so far.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Seismic.xsd</td>
+            <td><a href="./schema/Seismic.html#Seismic2dPostStackRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Seismic3dPostStackRepresentation_schema">Seismic3dPostStackRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>The feature of this representation should be the same survey feature as the associated Grid2Representation represents.. The indexing convention (mainly for associated properties) is : - Trace sample goes fastest - then inline - and crossline goes slowest The indexing convention only applies to HDF datasets (not SEGY file) Whole referenced SEGY file can be referenced in properties of this representation, not part so far.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Seismic.xsd</td>
+            <td><a href="./schema/Seismic.html#Seismic3dPostStackRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_SeismicLatticeFeature_schema">SeismicLatticeFeature data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Defined by two lateral ordered dimensions: inline (lateral), crossline (lateral and orthogonal to the inline dimension), which are fixed. To specify its location, a seismic feature can be associated with the seismic coordinates of the points of a representation. Represented by a 2D grid representation.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Seismic.xsd</td>
+            <td><a href="./schema/Seismic.html#SeismicLatticeFeature">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_SeismicLineSetFeature_schema">SeismicLineSetFeature data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>An unordered set of several seismic lines. Generally, it has no direct interpretation or representation.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Seismic.xsd</td>
+            <td><a href="./schema/Seismic.html#SeismicLineSetFeature">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_SeismicWellboreFrameRepresentation_schema">SeismicWellboreFrameRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>The interpretation of this representation must be a WellboreInterpretation. The acquisition information such as the time kind (TWT vs OWT for example) or survey acquisition type (checkshot vs VSP for example) should be captured by the associated acquisition activity.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Wells.xsd</td>
+            <td><a href="./schema/Wells.html#SeismicWellboreFrameRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_ShotPointLineFeature_schema">ShotPointLineFeature data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Location of a single line of shot points in a 2D seismic acquisition</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Seismic.xsd</td>
+            <td><a href="./schema/Seismic.html#ShotPointLineFeature">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_StratigraphicColumn_schema">StratigraphicColumn data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A global interpretation of the stratigraphy, which can be made up of several ranks of stratigraphic unit interpretations. BUSINESS RULE: All stratigraphic column rank interpretations that make up a stratigraphic column must be ordered by age.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Interpretations.xsd</td>
+            <td><a href="./schema/Interpretations.html#StratigraphicColumn">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_StratigraphicColumnRankInterpretation_schema">StratigraphicColumnRankInterpretation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A global hierarchy containing an ordered list of stratigraphic unit interpretations.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Interpretations.xsd</td>
+            <td><a href="./schema/Interpretations.html#StratigraphicColumnRankInterpretation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_StratigraphicOccurrenceInterpretation_schema">StratigraphicOccurrenceInterpretation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A local Interpretation.  It could be along a well, on a 2D map, or on a 2D section or on a part of the global volume of an earth model of a succession of rock feature elements. The stratigraphic column rank interpretation composing a stratigraphic occurrence can be ordered by the criteria listed in OrderingCriteria. </h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Interpretations.xsd</td>
+            <td><a href="./schema/Interpretations.html#StratigraphicOccurrenceInterpretation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_StratigraphicUnitInterpretation_schema">StratigraphicUnitInterpretation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Interpretation of a stratigraphic unit which includes the knowledge of the top, the bottom, and the deposition mode.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Interpretations.xsd</td>
+            <td><a href="./schema/Interpretations.html#StratigraphicUnitInterpretation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_StreamlinesFeature_schema">StreamlinesFeature data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Specification of the vector field upon which the streamlines are based. Streamlines are commonly used to trace the flow of phases (water / oil / gas / total) based upon their flux at a specified time. They may also be used for trace components for compositional simulation, e.g., CO2, or temperatures for thermal simulation. The flux enumeration provides support for the most usual cases with provision for extensions to other fluxes</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Streamlines.xsd</td>
+            <td><a href="./schema/Streamlines.html#StreamlinesFeature">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_StreamlinesRepresentation_schema">StreamlinesRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Representation of streamlines associated with a streamline feature and interpretation. Use StreamlinesFeature to define the vector field that supports the streamlines, i.e., describes what flux is being traced. Use Interpretation to distinguish between shared and differing interpretations. Usage Note: When defining streamline geometry, the PatchIndex will not be referenced, and may be set to a value of 0.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Streamlines.xsd</td>
+            <td><a href="./schema/Streamlines.html#StreamlinesRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_StringTableLookup_schema">StringTableLookup data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Defines an integer-to-string lookup table, for example, stores facies properties, where a facies index is associated with a facies name. . Used for categorical properties, which also may use a double table lookup</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Properties.xsd</td>
+            <td><a href="./schema/Properties.html#StringTableLookup">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_StructuralOrganizationInterpretation_schema">StructuralOrganizationInterpretation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>One of the main types of RESQML organizations, this class gathers boundary interpretations (e.g., horizons, faults and fault networks) plus frontier features and their relationships (contacts interpretations), which when taken together define the structure of a part of the earth. </h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Interpretations.xsd</td>
+            <td><a href="./schema/Interpretations.html#StructuralOrganizationInterpretation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_SubRepresentation_schema">SubRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>An ordered list of indexable elements and/or indexable element pairs of an existing representation. Because the representation concepts of topology, geometry, and property values are separate in RESQML, it is now possible to select a range of nodes, edges, faces, or volumes (cell) indices from the topological support of an existing representation to define a sub-representation. A sub-representation may describe a different feature interpretation using the same geometry or property as the "parent" representation. In this case, the only information exchanged is a set of potentially non-consecutive indices of the topological support of the representation. Optional additional grid topology is available for grid representations.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Representations.xsd</td>
+            <td><a href="./schema/Representations.html#SubRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_TriangulatedSetRepresentation_schema">TriangulatedSetRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A representation based on set of triangulated mesh patches, which gets its geometry from a 1D array of points. BUSINESS RULE: The orientation of all the triangles of this representation must be consistent.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Structural.xsd</td>
+            <td><a href="./schema/Structural.html#TriangulatedSetRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_TruncatedIjkGridRepresentation_schema">TruncatedIjkGridRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Grid class with an underlying IJK topology, together with a 1D split-cell list. The truncated IJK cells have more than the usual 6 faces. The split cells are arbitrary polyhedra, identical to those of an unstructured cell grid.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Grids.xsd</td>
+            <td><a href="./schema/Grids.html#TruncatedIjkGridRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_TruncatedUnstructuredColumnLayerGridRepresentation_schema">TruncatedUnstructuredColumnLayerGridRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Grid class with an underlying unstructured column-layer topology, together with a 1D split-cell list. The truncated cells have more than the usual number of faces within each column. The split cells are arbitrary polyhedra, identical to those of an unstructured cell grid.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Grids.xsd</td>
+            <td><a href="./schema/Grids.html#TruncatedUnstructuredColumnLayerGridRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_UnstructuredColumnLayerGridRepresentation_schema">UnstructuredColumnLayerGridRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Grid whose topology is characterized by an unstructured column index and a layer index, K. Cell geometry is characterized by nodes on coordinate lines, where each column of the model may have an arbitrary number of sides.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Grids.xsd</td>
+            <td><a href="./schema/Grids.html#UnstructuredColumnLayerGridRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_UnstructuredGridRepresentation_schema">UnstructuredGridRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Unstructured grid representation characterized by a cell count, and potentially nothing else. Both the oldest and newest simulation formats are based on this format.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Grids.xsd</td>
+            <td><a href="./schema/Grids.html#UnstructuredGridRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_WellboreFeature_schema">WellboreFeature data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>May refer to one of these: wellbore. A unique, oriented path from the bottom of a drilled borehole to the surface of the earth. The path must not overlap or cross itself. borehole. A hole excavated in the earth as a result of drilling or boring operations. The borehole may represent the hole of an entire wellbore (when no sidetracks are present), or a sidetrack extension. A borehole extends from an originating point (the surface location for the initial borehole or kickoff point for sidetracks) to a terminating (bottomhole) point. sidetrack. A borehole that originates in another borehole as opposed to originating at the surface.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Wells.xsd</td>
+            <td><a href="./schema/Wells.html#WellboreFeature">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_WellboreFrameRepresentation_schema">WellboreFrameRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Representation of a wellbore that is organized along a wellbore trajectory by its MD values. RESQML uses MD values to associate properties on points and to organize association of properties on intervals between MD points.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Wells.xsd</td>
+            <td><a href="./schema/Wells.html#WellboreFrameRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_WellboreInterpretation_schema">WellboreInterpretation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Contains the data describing an opinion of a borehole. This interpretation is relative to one particular well trajectory.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Wells.xsd</td>
+            <td><a href="./schema/Wells.html#WellboreInterpretation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_WellboreMarkerFrameRepresentation_schema">WellboreMarkerFrameRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A well log frame where each entry represents a well marker</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Wells.xsd</td>
+            <td><a href="./schema/Wells.html#WellboreMarkerFrameRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_WellboreTrajectoryRepresentation_schema">WellboreTrajectoryRepresentation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>Representation of a wellbore trajectory.</h5></th>
+
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;Wells.xsd</td>
+            <td><a href="./schema/Wells.html#WellboreTrajectoryRepresentation">XSD</a></td>
+         </tr>
+      </table>
+
+      <BR>
+      <BR>
+
+
+   </body>
+</html>
